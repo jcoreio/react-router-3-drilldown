@@ -7,7 +7,7 @@
 
 This is a simple component that provides drilldown-style horizontal slide transitions between index and child routes.
 It is based upon `react-view-slider`.
-Currently it only supports `react-router` versions 2 and 3.
+This branch is for `react-router` versions 2 and 3.  For `react-router` version 4, see the [master branch](https://github.com/jcoreio/react-router-drilldown).
 
 [Live Demo](http://jcoreio.github.io/react-router-drilldown/)
 
