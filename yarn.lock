@@ -6283,7 +6283,7 @@ schema-utils@^0.3.0:
   dependencies:
     ajv "^5.0.0"
 
-semantic-release@^12.2.2:
+semantic-release@^12.2.5:
   version "12.2.5"
   resolved "https://registry.npmjs.org/semantic-release/-/semantic-release-12.2.5.tgz#595cdffc4226a1974c3257052b6ee259c2353568"
   dependencies:
