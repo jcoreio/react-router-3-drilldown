@@ -1,3 +1,5 @@
+/* eslint-env commonjs */
+
 import {storiesOf} from '@kadira/storybook'
 import Demo from './Demo'
 

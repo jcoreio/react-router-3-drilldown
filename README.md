@@ -1,26 +1,26 @@
-# react-router-drilldown
+# react-router-3-drilldown
 
-[![Build Status](https://travis-ci.org/jcoreio/react-router-drilldown.svg?branch=master)](https://travis-ci.org/jcoreio/react-router-drilldown)
-[![Coverage Status](https://coveralls.io/repos/github/jcoreio/react-router-drilldown/badge.svg?branch=master)](https://coveralls.io/github/jcoreio/react-router-drilldown?branch=master)
+[![Build Status](https://travis-ci.org/jcoreio/react-router-3-drilldown.svg?branch=master)](https://travis-ci.org/jcoreio/react-router-3-drilldown)
+[![Coverage Status](https://codecov.io/gh/jcoreio/react-router-3-drilldown/branch/master/graph/badge.svg)](https://codecov.io/gh/jcoreio/react-router-3-drilldown)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 This is a simple component that provides drilldown-style horizontal slide transitions between index and child routes.
 It is based upon `react-view-slider`.
-This branch is for `react-router` versions 2 and 3.  For `react-router` version 4, see the [master branch](https://github.com/jcoreio/react-router-drilldown).
+This repo is the continuation of updates for `react-router` versions 2 and 3.  For `react-router` version 4, see the [main project](https://github.com/jcoreio/react-router-drilldown).
 
 [Live Demo](http://jcoreio.github.io/react-router-drilldown/)
 
 ## Usage
 ```
-npm install --save react-router-drilldown react-view-slider
+npm install --save react-router-3-drilldown react-view-slider
 ```
 
 ```js
 import React from 'react'
 import {render} from 'react-dom'
 import {Router, Route, IndexRoute, Link, browserHistory} from 'react-router'
-import Drilldown from 'react-router-drilldown'
+import Drilldown from 'react-router-3-drilldown'
 
 const Home = () => (
   <div>
@@ -61,14 +61,14 @@ in your drilldown UI you must use a `Drilldown` on each level.
 You can use this with my [react-transition-context](https://github.com/jedwards1211/react-transition-context) package
 to easily focus elements when a drilldown route has fully entered.
 ```
-npm install --save react-router-drilldown react-view-slider react-transition-context
+npm install --save react-router-3-drilldown react-view-slider react-transition-context
 ```
 
 ```js
 import React from 'react'
 import {render} from 'react-dom'
 import {Router, Route, IndexRoute, Link, browserHistory} from 'react-router'
-import Drilldown from 'react-router-drilldown/lib/withTransitionContext'
+import Drilldown from 'react-router-3-drilldown/lib/withTransitionContext'
 import {TransitionListener} from 'react-transition-context'
 
 const Home = () => (
@@ -155,5 +155,3 @@ Any extra class names to add to the inner "viewport" element.
 ### `viewportStyle: Object`
 
 Extra inline styles to add to the inner "viewport" element.
-
-

@@ -1,9 +1,9 @@
 /* @flow */
 /* eslint-env shared-node-browser */
 
-import React, {Component} from 'react'
+import * as React from 'react'
 import DefaultViewSlider from 'react-view-slider'
-import type {ViewProps, Props as ViewSliderProps} from 'react-view-slider'
+import type {ViewProps} from 'react-view-slider'
 import type {Prefixer} from 'inline-style-prefixer'
 
 type Side = 'left' | 'right'
@@ -37,7 +37,7 @@ export type Props = {
 }
 
 type State = {
-  children: [any, any],
+  children: Array<?React.Node>,
 }
 
 function getActiveView({route, routes}: Props): number {
@@ -49,14 +49,14 @@ function getActiveView({route, routes}: Props): number {
 }
 
 export function createDrilldown(config: {
-  ViewSlider?: ReactClass<ViewSliderProps>,
-} = {}): ReactClass<Props> {
-  return class Drilldown extends Component<void, Props, State> {
+  ViewSlider?: React.ComponentType<React.ElementConfig<typeof DefaultViewSlider>>,
+} = {}): React.ComponentType<Props> {
+  return class Drilldown extends React.Component<Props, State> {
     state: State
 
     constructor(props: Props) {
       super(props)
-      const children: [any, any] = [null, null]
+      const children: Array<?React.Node> = [null, null]
       children[getActiveView(props)] = props.children
       this.state = {children}
     }
@@ -71,13 +71,13 @@ export function createDrilldown(config: {
       }
     }
 
-    renderView = ({index, key, ref, style, transitionState}: ViewProps): React.Element<any> => (
+    renderView = ({index, key, ref, style, transitionState}: ViewProps): React.Node => (
       <div key={key} ref={ref} style={style} data-transition-state={transitionState}>
         {this.state.children[index]}
       </div>
     )
 
-    render(): React.Element<any> {
+    render(): React.Node {
       const {
         animateHeight, transitionDuration, transitionTimingFunction, prefixer, fillParent, className, style,
         viewportClassName, viewportStyle,
