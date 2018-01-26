@@ -116,7 +116,7 @@
   "peerDependencies": {
     "react": "^15.0.0 || ^16.0.0",
     "react-router": "^2.0.0 || ^3.0.0",
-    "react-view-slider": "^2.0.0"
+    "react-view-slider": "^3.0.0"
   },
   "optionalDependencies": {
     "react-transition-context": "^2.0.0"
